@@ -2,7 +2,7 @@ oh-my-zsh Cookbook
 ==================
 This is my first cookbook, so bear with me a little there. This is also my first open source piece of code! Urray for that!
 
-This cookbook was part of my process of learning how to chef, and a good piece of learning the ruby language too, so it will be improved. It is meant to setup oh-my-zsh and provides two recipes to accomplish that.
+This cookbook was part of my process of learning how to cook chef, and a good starting point to learn ruby too, so there is much room for improvement. It is meant to setup oh-my-zsh and provides two recipes to accomplish that.
 
 - The `::default` recipe will install oh-my-zsh for all users defined in `node['oh-my-zsh']['users']` (an example of using this node is presented below) or, if the node is empty, it will install for the user that called the chef-client (the recipe tries to bypass the root user if using sudo by getting the owner and group of the dir in the ENV['HOME'] variable).
 
