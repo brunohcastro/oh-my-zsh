@@ -124,7 +124,7 @@ node['oh-my-zsh']['users'].each do |user|
 		not_if { (user['aliases'].nil? || user['aliases'].empty?) && node['oh-my-zsh']['aliases'].empty? }
 	end
 
-		template "#{user['dir']}/#{node['oh-my-zsh']['dirname']}/custom/sources.zsh" do
+	template "#{user['dir']}/#{node['oh-my-zsh']['dirname']}/custom/sources.zsh" do
 	 	source "sources.zsh.erb"
 		owner user['name']
 		group user['gid']
